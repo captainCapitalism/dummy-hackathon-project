@@ -3,4 +3,8 @@ import fastapi
 app = fastapi.Fastapi()
 
 
-app2 = app
+@app.get()
+def hello():
+    return {
+        "hello": "app"
+    }
